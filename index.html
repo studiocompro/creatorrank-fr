@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CreatorRank FR — l’observatoire indépendant des créateurs et streamers francophones : classements, tendances, jeux, comparaisons et méthodologie transparente." />
+  <meta name="theme-color" content="#090b12" />
+  <title>CreatorRank FR — Les créateurs, par les faits.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <div class="demo-ribbon" id="dataRibbon" role="status">
+    <span class="demo-dot"></span>
+    Données réelles sourcées · sources datées par fiche · cadence 48 h
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" data-route="accueil" aria-label="CreatorRank FR — Accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-bar b1"></span><span class="brand-bar b2"></span><span class="brand-bar b3"></span>
+        </span>
+        <span>
+          <strong>CreatorRank</strong><em>FR</em>
+        </span>
+      </a>
+
+      <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      <div class="nav-links" id="primary-menu">
+        <a href="#classements" data-route="classements">Classements</a>
+        <a href="#revelations" data-route="revelations">Révélations</a>
+        <a href="#jeux" data-route="jeux">Jeux</a>
+        <a href="#comparateur" data-route="comparateur">Comparer</a>
+        <a href="#affaires" data-route="affaires">Affaires & décisions</a>
+        <a href="#methodologie" data-route="methodologie">Méthodologie</a>
+        <a href="about.html">À propos</a>
+      </div>
+
+      <button class="search-trigger" id="openSearch" type="button" aria-label="Rechercher un créateur">
+        <span aria-hidden="true">⌕</span> Rechercher <kbd>Ctrl K</kbd>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="accueil" data-section="accueil">
+      <div class="hero-glow hero-glow-a"></div>
+      <div class="hero-glow hero-glow-b"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> Observatoire francophone des créateurs</div>
+          <h1>Les créateurs,<br><span>par les faits.</span></h1>
+          <p class="hero-lede">CreatorRank FR rassemble les performances des créateurs francophones sur YouTube, Twitch et Kick dans des classements lisibles, vérifiables et expliqués.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#classements" data-route="classements">Explorer les classements <span>→</span></a>
+            <a class="btn btn-ghost" href="#methodologie" data-route="methodologie">Comment les scores sont calculés</a>
+          </div>
+          <div class="trust-row" aria-label="Principes du site">
+            <span>◉ Sources visibles</span><span>◫ Formules publiques</span><span>↻ Historique daté</span><span>◎ France + francophonie</span>
+          </div>
+        </div>
+
+        <div class="hero-dashboard" aria-label="Aperçu des classements">
+          <div class="dashboard-topline">
+            <span>Indice CreatorRank</span>
+            <span class="badge badge-live">DONNÉES RÉELLES</span>
+          </div>
+          <div class="spotlight-card">
+            <div class="spotlight-rank">#1</div>
+            <div class="avatar avatar-xl" id="heroAvatar" data-initials="TI"></div>
+            <div class="spotlight-copy">
+              <small id="heroRankLabel">#1 YouTube France · abonnés</small>
+              <h2 id="heroName">Tibo InShape</h2>
+              <div class="trend-up"><span id="heroSubs">26,9 M</span> <span id="heroObserved">relevé le 04/09/2026</span></div>
+            </div>
+            <div class="score-ring" style="--score:100"><span>#1</span><small>FR</small></div>
+          </div>
+          <div class="mini-grid">
+            <article><span class="metric-icon">▶</span><small>Vidéos chaîne</small><strong id="heroVideos">6 909</strong><em>YouTube</em></article>
+            <article><span class="metric-icon">◎</span><small>Vues cumulées</small><strong id="heroViews">21,7 Md</strong><em>YouTube</em></article>
+            <article><span class="metric-icon">◉</span><small>Twitch francophone</small><strong id="heroTwitchCount">—</strong><em>chaînes suivies</em></article>
+            <article><span class="metric-icon">◆</span><small>Kick francophone</small><strong id="heroKickCount">—</strong><em>chaînes suivies</em></article>
+          </div>
+          <div class="spark-card">
+            <div><small>Historique CreatorRank</small><strong>collecte dès mise en ligne</strong></div>
+            <svg viewBox="0 0 520 120" role="img" aria-label="Courbe décorative représentant le futur historique CreatorRank">
+              <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity=".35"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+              <path class="spark-area" d="M0 96 C55 92 72 76 110 80 S170 74 202 61 S267 76 300 48 S350 35 382 48 S435 15 520 18 L520 120 L0 120Z" fill="url(#area)"/>
+              <path class="spark-line" d="M0 96 C55 92 72 76 110 80 S170 74 202 61 S267 76 300 48 S350 35 382 48 S435 15 520 18" fill="none"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="container stats-strip" aria-label="Couverture actuelle du catalogue">
+        <div><strong id="youtubeCount">—</strong><span>profils / chaînes YouTube vérifiés</span></div>
+        <div><strong id="twitchCount">—</strong><span>chaînes Twitch francophones suivies</span></div>
+        <div><strong id="kickCount">—</strong><span>chaînes Kick francophones suivies</span></div>
+        <div><strong id="gameCount">—</strong><span>univers de jeux suivis</span></div>
+        <div><strong>48 h</strong><span>cadence de publication prévue</span></div>
+      </div>
+      <div class="container territory-overview" id="couverture">
+        <div class="territory-overview-head"><div><span class="eyebrow">Couverture francophone V5</span><h2>La France n’est qu’une partie du classement.</h2></div><p>CreatorRank sépare désormais France, Québec/Canada francophone, Belgique et Suisse romande. Les autres territoires francophones seront ajoutés sans les mélanger artificiellement à la France.</p></div>
+        <div class="territory-grid" id="territoryCoverage"></div>
+        <div class="coverage-note panel"><strong>Annuaire ≠ classement automatique.</strong><span>Les grands annuaires servent à découvrir les comptes manquants. Les statistiques de classement sont ensuite vérifiées et rafraîchies par source/API quand cela est possible.</span></div>
+      </div>
+
+      <div class="container ad-wrap ad-wrap-hero" aria-label="Publicité">
+        <div class="ad-slot" data-ad-slot="home-leaderboard-01" data-ad-format="leaderboard">
+          <span class="ad-label">PUBLICITÉ</span><strong>Emplacement publicitaire</strong><small>La régie sera chargée uniquement selon vos choix de consentement.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ranking-section" id="classements" data-section="classements">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div><div class="eyebrow">Classements principaux</div><h2>Une performance n’a pas qu’une seule définition.</h2></div>
+          <p>Popularité, activité, buzz, croissance et performance relative sont séparés pour éviter qu’un seul chiffre raconte toute l’histoire.</p>
+        </div>
+
+        <div class="ranking-tabs" role="tablist" aria-label="Type de classement">
+          <button class="rank-tab active" data-ranking="subscribers" role="tab" aria-selected="true">YouTube · Abonnés</button>
+          <button class="rank-tab" data-ranking="views" role="tab">YouTube · Vues</button>
+          <button class="rank-tab" data-ranking="uploads" role="tab">YouTube · Vidéos</button>
+          <button class="rank-tab" data-ranking="growth" role="tab">YouTube · Croissance</button>
+          <button class="rank-tab" data-ranking="avgViewers" role="tab">Twitch · Viewers moyens</button>
+          <button class="rank-tab" data-ranking="watchHours" role="tab">Twitch · Heures regardées</button>
+          <button class="rank-tab" data-ranking="streamTime" role="tab">Twitch · Temps streamé</button>
+          <button class="rank-tab" data-ranking="followers" role="tab">Twitch · Followers</button>
+          <button class="rank-tab" data-ranking="followerGrowth" role="tab">Twitch · Croissance followers</button>
+          <button class="rank-tab" data-ranking="activeSubs" role="tab">Twitch · Subs actifs</button>
+          <button class="rank-tab" data-ranking="peak" role="tab">Twitch · Pic viewers</button>
+          <button class="rank-tab" data-ranking="kickFollowers" role="tab">Kick · Followers</button>
+          <button class="rank-tab" data-ranking="kickAvg" role="tab">Kick · Viewers moyens</button>
+          <button class="rank-tab" data-ranking="kickWatch" role="tab">Kick · Heures regardées</button>
+          <button class="rank-tab" data-ranking="kickTime" role="tab">Kick · Temps streamé</button>
+          <button class="rank-tab" data-ranking="kickGrowth" role="tab">Kick · Croissance</button>
+          <button class="rank-tab" data-ranking="kickPeak" role="tab">Kick · Pic viewers</button>
+        </div>
+
+        <div class="toolbar panel">
+          <div class="filter-group">
+            <label for="platformFilter">Territoire francophone</label>
+            <select id="platformFilter"><option value="all">Tous les territoires</option><option value="France">France</option><option value="Québec / Canada francophone">Québec / Canada francophone</option><option value="Belgique">Belgique</option><option value="Suisse romande">Suisse romande</option><option value="Autres francophones">Autres francophones</option></select>
+          </div>
+          <div class="filter-group">
+            <label for="periodFilter">Couverture</label>
+            <select id="periodFilter"><option value="all">Tous profils</option><option value="creator">Créateurs / duos</option><option value="editorial">Chaînes éditoriales / médias</option><option value="music">Musique</option></select>
+          </div>
+          <div class="method-chip" id="formulaHint">Classé par nombre d’abonnés publics.</div>
+        </div>
+
+        <div class="ranking-layout">
+          <div class="table-card panel">
+            <div class="table-headline"><div><small>Classement actif</small><strong id="rankingTitle">Plus suivis</strong></div><span class="refresh-label" id="snapshotLabel">Sources vérifiées · sept. 2026</span></div>
+            <div class="table-scroll">
+              <table class="ranking-table">
+                <thead><tr><th>#</th><th>Créateur</th><th>Plateforme</th><th id="metricHeader">Abonnés</th><th>Évolution</th><th></th></tr></thead>
+                <tbody id="rankingBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="explain-card panel">
+            <div class="explain-icon">i</div>
+            <small>Pourquoi ce classement existe</small>
+            <h3 id="explainTitle">Popularité brute</h3>
+            <p id="explainText">Mesure la taille publique de l’audience. Il ne mesure ni la qualité, ni l’influence, ni la performance actuelle.</p>
+            <div class="formula-box"><span>FORMULE</span><code id="formulaText">abonnés publics</code></div>
+            <a href="#methodologie" data-route="methodologie">Voir la méthodologie complète →</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="container ad-wrap ad-wrap-between" aria-label="Publicité">
+      <div class="ad-slot" data-ad-slot="home-content-01" data-ad-format="responsive"><span class="ad-label">PUBLICITÉ</span><strong>Emplacement publicitaire</strong><small>Format responsive · régie à connecter.</small></div>
+    </div>
+
+    <section class="section breakout-section" id="revelations" data-section="revelations">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div><div class="eyebrow eyebrow-green">Révélations & percées</div><h2>Repérer ceux qui montent avant qu’ils deviennent énormes.</h2></div>
+          <p>Ce classement privilégie la <strong>progression relative</strong> et la surperformance par rapport à la taille habituelle. Un petit créateur peut donc passer devant une célébrité si son signal est réellement exceptionnel.</p>
+        </div>
+
+        <div class="breakout-rules panel">
+          <div><span class="rule-icon">↗</span><strong>Petit / émergent</strong><small>Filtre petits comptes : Twitch/Kick sous 100 k followers ; YouTube sous 250 k abonnés.</small></div>
+          <div><span class="rule-icon">◎</span><strong>Preuve de traction</strong><small>Followers gagnés + viewers, ou vidéo nettement au-dessus du niveau habituel.</small></div>
+          <div><span class="rule-icon">⚑</span><strong>Anomalies séparées</strong><small>Une hausse de followers sans viewers cohérents est marquée « à vérifier », pas récompensée aveuglément.</small></div>
+        </div>
+
+        <div class="breakout-toolbar">
+          <div class="ranking-tabs" role="tablist" aria-label="Filtres révélations">
+            <button class="breakout-filter active" data-breakout="all">Toutes les percées</button>
+            <button class="breakout-filter" data-breakout="twitch">Twitch</button>
+            <button class="breakout-filter" data-breakout="youtube">YouTube</button>
+            <button class="breakout-filter" data-breakout="kick">Kick</button>
+            <button class="breakout-filter" data-breakout="micro">Petits comptes</button>
+            <button class="breakout-filter" data-breakout="review">Signaux à vérifier</button>
+          </div>
+          <span class="refresh-label">Twitch : 30 j · Kick : 7 j · YouTube : historique propre</span>
+        </div>
+
+        <div class="breakout-list" id="breakoutList"></div>
+        <div class="breakout-method panel">
+          <strong>Pourquoi ce classement est différent ?</strong>
+          <p>Sur Twitch, CreatorRank regarde notamment la part de l’audience actuelle gagnée sur 30 jours. Sur Kick, la V5 utilise une fenêtre homogène de 7 jours clairement séparée. Sur YouTube, tant que notre historique 48 h n’est pas assez long, nous utilisons des surperformances et signaux récents sourcés. À terme, les trois plateformes seront recalculées depuis l’historique CreatorRank quand les API et fenêtres le permettent.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section self-section" id="performance-relative">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">Signature CreatorRank</div><h2>Buzz & « contre soi-même » : pas de chiffre inventé.</h2><p>Ces deux classements demandent un historique homogène. Dès la mise en ligne, CreatorRank conservera des snapshots datés ; le score sera publié uniquement quand la fenêtre statistique est suffisante.</p></div>
+        <div class="self-grid" id="selfCards"></div>
+      </div>
+    </section>
+
+    <section class="section games-section" id="jeux" data-section="jeux">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div><div class="eyebrow">Classements par univers</div><h2>Les créateurs qui comptent, jeu par jeu.</h2></div>
+          <p>Chaque jeu aura ses tops : audience, vues, heures diffusées, progression, buzz et régularité.</p>
+        </div>
+        <div class="game-grid" id="gameGrid"></div>
+        <div class="ad-wrap ad-wrap-section" aria-label="Publicité"><div class="ad-slot" data-ad-slot="games-inline-01" data-ad-format="responsive"><span class="ad-label">PUBLICITÉ</span><strong>Emplacement publicitaire</strong><small>La publicité n’influence jamais les classements.</small></div></div>
+      </div>
+    </section>
+
+    <section class="section compare-section" id="comparateur" data-section="comparateur">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">Comparateur</div><h2>Deux créateurs. Les mêmes règles.</h2><p>Comparer des dimensions homogènes et montrer quand une comparaison n’est pas pertinente.</p></div>
+        <div class="compare-shell panel">
+          <div class="compare-picker">
+            <label>Créateur A<select id="creatorA"></select></label>
+            <div class="versus">VS</div>
+            <label>Créateur B<select id="creatorB"></select></label>
+          </div>
+          <div class="compare-visual" id="compareVisual"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section justice-section" id="affaires" data-section="affaires">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div><div class="eyebrow eyebrow-red">Affaires & décisions</div><h2>Les faits judiciaires, sans tribunal populaire.</h2></div>
+          <p>Cette rubrique ne classe pas la « moralité » des personnes. Elle documente des procédures et décisions publiques avec leur statut exact, leur date et leurs sources.</p>
+        </div>
+
+        <div class="legal-principle panel">
+          <div class="shield">⚖</div>
+          <div><strong>Règle éditoriale</strong><p>Jamais « coupable » avant condamnation. Les statuts sont séparés : enquête, mise en examen, poursuites, condamnation, appel, relaxe/acquittement, classement sans suite.</p></div>
+          <span class="badge badge-source">SOURCE OBLIGATOIRE</span>
+        </div>
+
+        <div class="case-controls">
+          <button class="case-filter active" data-case="all">Toutes</button>
+          <button class="case-filter" data-case="convictions">Condamnations</button>
+          <button class="case-filter" data-case="proceedings">Procédures en cours</button>
+          <button class="case-filter" data-case="complaints">Plaintes / signalements judiciaires</button>
+          <button class="case-filter" data-case="cleared">Affaires closes / classées</button>
+        </div>
+        <div class="justice-split">
+          <div class="case-list" id="caseList"></div>
+          <aside class="sentence-board panel">
+            <div class="sentence-board-head"><small>TRI OBJECTIF</small><h3>Peines prononcées</h3><p>Tri indicatif par durée d’emprisonnement prononcée, puis part ferme, puis amende. Ce n’est pas un classement moral ni une comparaison de la gravité humaine des faits.</p></div>
+            <div id="sentenceRanking"></div>
+          </aside>
+        </div>
+        <p class="fineprint">Les statuts sont datés. Une plainte ou une mise en examen n’est jamais une condamnation. Lorsqu’aucune source récente ne permet de confirmer l’état d’une procédure, CreatorRank l’indique explicitement au lieu de supposer.</p>
+      </div>
+    </section>
+
+    <section class="section methodology-section" id="methodologie" data-section="methodologie">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">Méthodologie publique</div><h2>Un classement doit pouvoir être contesté… avec des données.</h2><p>Chaque indicateur expose ce qu’il mesure, ce qu’il ne mesure pas, sa fenêtre temporelle et sa formule.</p></div>
+        <div class="method-grid">
+          <article class="method-card panel"><span>01</span><h3>Source d’abord</h3><p>Chaque donnée sensible conserve sa provenance, sa date d’observation et, si possible, une source primaire.</p><small>Objectif : rendre la vérification immédiate.</small></article>
+          <article class="method-card panel"><span>02</span><h3>Une métrique = une idée</h3><p>On sépare popularité, activité, buzz, croissance et régularité au lieu de fabriquer un « meilleur créateur » opaque.</p><small>Objectif : éviter les conclusions excessives.</small></article>
+          <article class="method-card panel"><span>03</span><h3>Baseline personnelle</h3><p>La performance d’une publication est comparée à l’historique récent du même créateur, avec médiane plutôt que moyenne lorsque pertinent.</p><small>Objectif : mesurer l’exceptionnel, pas seulement la taille.</small></article>
+          <article class="method-card panel"><span>04</span><h3>Historique immuable</h3><p>Les valeurs observées sur YouTube, Twitch et Kick sont datées afin de montrer l’évolution et de pouvoir recalculer les classements dans le temps.</p><small>Objectif : construire une mémoire du web francophone.</small></article>
+        </div>
+
+        <div class="formula-lab panel">
+          <div class="formula-copy"><small>EXEMPLE · SCORE BUZZ</small><h3>Mesurer une rupture avec l’habitude.</h3><p>Une vidéo à 1 million de vues peut être un énorme buzz pour une chaîne et une contre-performance pour une autre. Le futur score utilisera des vues observées à âge comparable pour éviter de favoriser mécaniquement les anciennes vidéos.</p></div>
+          <div class="formula-large"><code>Buzz 7j = vues à J+7 ÷ médiane des vues à J+7 des 20 précédentes</code><div><span>Statut actuel</span><strong>EN COLLECTE</strong></div></div>
+        </div>
+
+        <div class="sources-panel panel">
+          <div><small>Principes de communication utilisés pour cette V5</small><h3>Lisibilité, preuve, contexte.</h3></div>
+          <ul>
+            <li><strong>Stanford Web Credibility Project</strong><span>Vérifiabilité, sources visibles, professionnalisme, actualisation.</span></li>
+            <li><strong>Harvard Catalyst</strong><span>Adapter le graphique au message et au public, simplifier les informations complexes.</span></li>
+            <li><strong>MIT Communication Lab</strong><span>Une visualisation doit porter un message clair et ne conserver que l’évidence utile.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section funding-section" id="financement">
+      <div class="container funding-grid">
+        <div><div class="eyebrow">Financement & indépendance</div><h2>Un site gratuit, financé sans vendre les classements.</h2><p>CreatorRank prévoit quelques emplacements publicitaires clairement identifiés. Un annonceur ne peut ni acheter une place dans un classement, ni modifier une fiche, ni faire disparaître un fait sourcé.</p><div class="hero-actions"><a class="btn btn-ghost" href="about.html">À propos du projet</a><a class="btn btn-ghost" href="advertising.html">Publicité & AdBlock</a></div></div>
+        <div class="funding-card panel"><strong>Vous utilisez un bloqueur de publicité ?</strong><p>Le contenu reste accessible. Si CreatorRank vous est utile, vous pourrez autoriser le site dans votre bloqueur : cela aidera à financer l’hébergement, la collecte des données et les vérifications.</p><small>Aucune publicité personnalisée ni traceur publicitaire n’est chargé avant consentement.</small></div>
+      </div>
+    </section>
+
+    <section class="section manifesto-section">
+      <div class="container manifesto">
+        <span class="quote-mark">“</span>
+        <p>Nous ne classons pas les personnes selon nos opinions.<br><strong>Nous classons des données vérifiables selon une méthodologie publique.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark"><span class="brand-bar b1"></span><span class="brand-bar b2"></span><span class="brand-bar b3"></span></span><span><strong>CreatorRank</strong><em>FR</em></span></a><p>L’observatoire indépendant des créateurs et streamers francophones.</p></div>
+      <div><strong>Explorer</strong><a href="#classements">Classements</a><a href="#revelations">Révélations</a><a href="#jeux">Jeux</a><a href="#comparateur">Comparateur</a></div>
+      <div><strong>Transparence</strong><a href="#methodologie">Méthodologie</a><a href="#affaires">Affaires & décisions</a><a href="corrections.html">Corrections</a><a href="privacy.html">Confidentialité</a></div>
+      <div><strong>Projet</strong><a href="about.html">À propos</a><a href="advertising.html">Publicité & AdBlock</a><a href="contact.html">Contact</a><a href="legal.html">Mentions légales</a><a href="cookies.html">Cookies</a><button class="footer-link-button" type="button" data-open-consent>Gérer mes cookies</button></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 CreatorRank FR · V5 base francophone multi-plateformes</span><span>Sources externes indiquées sur chaque fiche · aucune affiliation avec YouTube, Twitch, Kick ou les créateurs cités.</span></div>
+  </footer>
+
+
+  <div class="adblock-notice" id="adblockNotice" hidden role="status">
+    <div><strong>CreatorRank semble bloqué par un bloqueur de publicité.</strong><span>Le site reste accessible. Si vous souhaitez soutenir ce projet gratuit, vous pouvez autoriser CreatorRank dans AdBlock/uBlock.</span></div>
+    <a href="advertising.html">Pourquoi ?</a><button type="button" data-dismiss-adblock aria-label="Fermer">×</button>
+  </div>
+
+  <div class="consent-banner" id="consentBanner" hidden role="dialog" aria-label="Choix des cookies">
+    <div><strong>Vos choix de confidentialité</strong><p>Les fonctions essentielles ne nécessitent pas votre accord. Les futurs traceurs de mesure d’audience non exemptés et de publicité restent désactivés tant que vous ne les acceptez pas.</p></div>
+    <div class="consent-actions"><button class="btn btn-primary" type="button" data-consent-all>Tout accepter</button><button class="btn btn-ghost" type="button" data-consent-reject>Tout refuser</button><button class="btn btn-ghost" type="button" data-open-consent>Paramétrer</button></div>
+  </div>
+
+  <dialog class="consent-modal" id="consentModal">
+    <form method="dialog" class="consent-panel">
+      <button class="modal-close" value="cancel" aria-label="Fermer">×</button>
+      <small>CONFIDENTIALITÉ</small><h2>Gérer mes choix</h2><p>Vous pouvez modifier ces choix à tout moment depuis le pied de page.</p>
+      <label class="consent-row"><span><strong>Nécessaires</strong><small>Fonctionnement, sécurité et mémorisation de vos choix.</small></span><input type="checkbox" checked disabled></label>
+      <label class="consent-row"><span><strong>Mesure d’audience</strong><small>Désactivée par défaut tant qu’un outil conforme n’est pas configuré.</small></span><input id="consentAnalytics" type="checkbox"></label>
+      <label class="consent-row"><span><strong>Publicité</strong><small>Autorise le chargement futur de la régie et de ses traceurs lorsqu’ils nécessitent un consentement.</small></span><input id="consentAds" type="checkbox"></label>
+      <div class="consent-modal-actions"><button class="btn btn-primary" value="default" type="button" data-save-consent>Enregistrer</button><a href="cookies.html">En savoir plus</a></div>
+    </form>
+  </dialog>
+
+  <dialog class="search-modal" id="searchModal">
+    <div class="search-box">
+      <div class="search-input-wrap"><span>⌕</span><input id="globalSearch" type="search" autocomplete="off" placeholder="Rechercher un créateur, un jeu, un classement…" aria-label="Recherche globale"><button id="closeSearch" aria-label="Fermer">Esc</button></div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </dialog>
+
+  <dialog class="profile-modal" id="profileModal">
+    <button class="modal-close" id="closeProfile" aria-label="Fermer">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="assets/site.js"></script>
+  <script src="data/catalog.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

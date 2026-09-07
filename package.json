@@ -1,0 +1,10 @@
+{
+  "name": "creatorrank-fr",
+  "private": true,
+  "version": "0.5.0",
+  "type": "module",
+  "scripts": {
+    "update:data": "node scripts/update-data.mjs",
+    "serve": "python3 -m http.server 8080"
+  }
+}
