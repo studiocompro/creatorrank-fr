@@ -1,0 +1,53 @@
+name: Actualiser les données CreatorRank
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: creatorrank-data-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Actualiser YouTube, Twitch et Kick
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          KICK_CLIENT_ID: ${{ secrets.KICK_CLIENT_ID }}
+          KICK_CLIENT_SECRET: ${{ secrets.KICK_CLIENT_SECRET }}
+          UPDATE_INTERVAL_HOURS: '48'
+        run: npm run update:data
+
+      - name: Publier les nouvelles donnees
+        run: |
+          git config user.name "CreatorRank Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalog.json data/catalog.js data/history.json
+
+          if git diff --cached --quiet; then
+            echo "Aucune donnee a publier."
+            exit 0
+          fi
+
+          git commit -m "Actualise les donnees CreatorRank"
+          git push
