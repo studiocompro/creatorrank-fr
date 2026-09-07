@@ -1,0 +1,10 @@
+{
+  "youtube": {},
+  "twitch": {},
+  "meta": {
+    "createdAt": "2026-09-07T04:45:00+02:00",
+    "note": "Historique initial vide. Il se remplit automatiquement après déploiement et activation des clés API.",
+    "schemaVersion": "0.5.0"
+  },
+  "kick": {}
+}
