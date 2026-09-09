@@ -1,6 +1,6 @@
 window.CREATORRANK_SUPPORT = {
   // Exemple : "https://ko-fi.com/toncompte" ou "https://paypal.me/toncompte"
-  directUrl: "https://ko-fi.com/creatorrankfr"
+  directUrl: "https://ko-fi.com/sourcestudio"
 };
 
 (() => {
