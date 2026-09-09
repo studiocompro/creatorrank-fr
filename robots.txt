@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://creatorrank-fr.pages.dev/sitemap.xml
